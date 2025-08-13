@@ -20,6 +20,7 @@ jobs:
         with: 
           name: code
           path: .
+          include-hidden-files: true
   Linting:
     runs-on: ubuntu-latest
     needs: [Build]
@@ -29,6 +30,7 @@ jobs:
         with:
           name: code
           path: .
+          include-hidden-files: true
       - name: run linting
         uses: super-linter/super-linter/slim@v7 
         env:
